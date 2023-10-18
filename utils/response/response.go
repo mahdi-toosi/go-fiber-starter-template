@@ -38,6 +38,7 @@ var ErrorHandler = func(c *fiber.Ctx, err error) error {
 		Code: fiber.StatusInternalServerError,
 	}
 
+	// TODO check the wierd thing in fiber plz :)
 	//_, ok := err.(validator.ValidationErrors)
 	//log.Debug().Msgf("%+v", ok)
 

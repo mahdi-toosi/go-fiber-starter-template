@@ -35,6 +35,9 @@ type controller struct {
 func (_i *controller) Login(c *fiber.Ctx) error {
 	req := new(request.Login)
 	if err := response.ParseAndValidate(c, req); err != nil {
+		// TODO check the wierd thing in fiber plz :)
+		//_, ok := err.(validator.ValidationErrors)
+		//log.Debug().Msgf("%+v", ok)
 		return err
 	}
 
